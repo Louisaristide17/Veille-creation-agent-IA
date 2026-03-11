@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissertation IA : Création d'un agent intelligent</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button class="theme-btn" id="themeToggle">
+                
+            </button>
+        </div>
+
+        <h1>Création d'un agent IA</h1>
+        
+
+        <!-- Introduction -->
+        <section class="section">
+            <h2 class="section-title">Introduction</h2>
+            <p>L'intelligence artificielle (IA) a envahi nos vies, des assistants vocaux aux véhicules autonomes. Au cœur de ces systèmes se trouvent des <strong>agents IA</strong> : des entités capables de percevoir leur environnement, de raisonner et d'agir pour atteindre des objectifs. Mais comment crée-t-on un tel agent ? Cette dissertation explore les fondements, les étapes et les défis de la conception d'un agent intelligent, en mêlant théorie et pratique.</p>
+        </section>
+
+        <!-- Qu'est-ce qu'un agent IA ? -->
+        <section class="section">
+            <h2 class="section-title">Qu'est-ce qu'un agent IA ?</h2>
+            <p>Un agent IA est un système logiciel qui perçoit son environnement via des capteurs (données, caméras, texte...) et agit sur celui-ci via des effecteurs (API, robots, affichage...). Il suit généralement un cycle : <strong>perception → raisonnement → action</strong>. On distingue plusieurs types : agents réactifs (réflexes), agents à base de modèles (avec mémoire), agents basés sur des objectifs, et agents utilitaires (maximisant une récompense).</p>
+            <div class="highlight">
+                💡 Exemple : un chatbot perçoit une question (texte), raisonne avec un modèle de langage, et agit en générant une réponse.
+            </div>
+        </section>
+
+        <!-- Composants clés -->
+        <section class="section">
+            <h2 class="section-title">Composants fondamentaux</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🧠 Perception</h3>
+                    <p>Transformer des données brutes (images, sons, texte) en représentations exploitables. Utilise du traitement du signal, de la vision par ordinateur, du NLP, etc.</p>
+                </div>
+                <div class="card">
+                    <h3>⚙️ Raisonnement</h3>
+                    <p>Le "cerveau" : algorithmes de recherche, logique, réseaux de neurones, apprentissage par renforcement. C'est ici que l'agent décide de l'action à entreprendre.</p>
+                </div>
+                <div class="card">
+                    <h3>🤖 Action</h3>
+                    <p>Interface avec le monde extérieur : envoi de commandes, génération de texte, contrôle de moteurs. L'action doit être cohérente avec la décision.</p>
+                </div>
+                <div class="card">
+                    <h3>💾 Mémoire/État</h3>
+                    <p>Pour les agents non triviaux, conserver un historique permet d'adapter le comportement dans le temps (ex: mémoire à long terme des LLM).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Étapes de création -->
+        <section class="section">
+            <h2 class="section-title">Le processus de création</h2>
+            <p>Créer un agent IA suit une méthodologie rigoureuse, souvent itérative :</p>
+            <ol style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>Définition du problème :</strong> Objectifs, environnement, actions possibles, récompenses (si RL).</li>
+                <li><strong>Collecte et préparation des données :</strong> Nécessaire pour l'apprentissage supervisé ou non supervisé. Étape cruciale (qualité > quantité).</li>
+                <li><strong>Choix du modèle/architecture :</strong> Réseau de neurones, arbres de décision, système basé sur des règles, etc.</li>
+                <li><strong>Entraînement et validation :</strong> Ajustement des paramètres, backpropagation, validation croisée.</li>
+                <li><strong>Évaluation :</strong> Tests en environnement simulé ou réel, métriques (précision, rappel, reward cumulative).</li>
+                <li><strong>Déploiement et suivi :</strong> Mise en production, monitoring, et mise à jour continue.</li>
+            </ol>
+            <div class="highlight">
+                🔄 L'approche itérative (Agile) est courante : on améliore l'agent par cycles successifs après retours.
+            </div>
+        </section>
+
+        <!-- Outils et technologies -->
+        <section class="section">
+            <h2 class="section-title">Outils et frameworks</h2>
+            <p>Les développeurs s'appuient sur des bibliothèques puissantes :</p>
+            <div class="card-grid" style="grid-template-columns: repeat(2,1fr);">
+                <div class="card">TensorFlow / PyTorch pour les réseaux profonds</div>
+                <div class="card">scikit-learn pour les modèles classiques</div>
+                <div class="card">OpenAI Gym / Unity ML-Agents pour l'apprentissage par renforcement</div>
+                <div class="card">Hugging Face pour les transformers (NLP)</div>
+                <div class="card">LangChain pour orchestrer des agents conversationnels</div>
+                <div class="card">Rasa / Dialogflow pour les chatbots</div>
+            </div>
+        </section>
+
+        <!-- Défis éthiques -->
+        <section class="section">
+            <h2 class="section-title">Défis et considérations éthiques</h2>
+            <p>Au-delà de la technique, créer un agent IA soulève des questions cruciales :</p>
+            <ul style="margin-left: 20px;">
+                <li><strong>Biais et équité :</strong> Les données d'entraînement peuvent perpétuer des discriminations.</li>
+                <li><strong>Transparence :</strong> L'agent doit être explicable (XAI) pour la confiance et la régulation.</li>
+                <li><strong>Sécurité :</strong> Robustesse face aux attaques adversariales.</li>
+                <li><strong>Impact sociétal :</strong> Automatisation d'emplois, vie privée, autonomie.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion avec interaction JavaScript -->
+        <section class="section">
+            <h2 class="section-title">Conclusion</h2>
+            <p>La création d'un agent IA est un processus pluridisciplinaire qui allie mathématiques, informatique, neurosciences cognitives et éthique. Chaque agent est unique, conçu pour un environnement et des objectifs spécifiques. Les avancées récentes (LLM, RLHF) ouvrent des horizons fascinants, mais imposent une vigilance accrue. En tant que futurs concepteurs, nous devons façonner des agents bénéfiques pour l'humanité.</p>
+
+            
+
+            <div id="extra" class="extra-content">
+                <h3 style="margin-bottom: 15px;">🚀 Tendances 2025</h3>
+                <p>Les agents multi-modaux (texte, image, son) deviennent la norme. L'apprentissage par renforcement à partir de feedback humain (RLHF) améliore l'alignement. Les "agentic workflows" permettent à plusieurs agents de collaborer (ex: AutoGPT). Enfin, les modèles plus petits et spécialisés (SLM) gagnent en popularité pour l'edge computing.</p>
+                <p style="margin-top: 10px;">🔍 La recherche se concentre aussi sur la réduction de l'empreinte carbone de l'entraînement et sur l'explicabilité.</p>
+            </div>
+        </section>
+
+        <footer>
+            Création d'un agent IA
+        </footer>
+    </div>
+
+    
+</body>
+</html>
